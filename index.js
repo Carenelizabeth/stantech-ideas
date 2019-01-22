@@ -38,7 +38,7 @@ function loopHeader(){
     firstImage();
     setTimeout(secondImage, 1500)
     setTimeout(thirdImage, 3000)
-    setTimeout(loopHeader, 4500)
+    setTimeout(loopHeader, 6000)
 }
 
 
