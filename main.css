@@ -49,12 +49,16 @@ table {
  /*begin custom CSS*/
  *{box-sizing: border-box}
 
+section{
+  min-height: 100vh;
+}
+
 nav{
     height: 50px;
     width: 100%;
     background-color: #353919;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 20px;
     align-items: center;
 }
@@ -63,20 +67,27 @@ nav p{
     color: white;
 }
 
-header{
+.header1{
     width: 100%;
-    height: 580px;
-    background-color: #d5d9a8;
+    height: 420px;
+    background-image: url('./assets/misty.png');
+    background-size: cover;
+    background-position: center;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     position: relative;
+    border-bottom: 4px solid #353919;
+    margin-bottom: 30px;
 }
 
 h1{
     font-family: 'Special Elite', cursive;
-    font-size: 40px;
-    padding-bottom: 100px;
+    font-size: 30px;
+}
+
+h2{
+  font-family: sans-serif;
 }
 
 .typewriter h1{
@@ -87,6 +98,15 @@ h1{
     animation: typing 3.5s steps(19, end);
 }
 
+.header-text-1{
+  width: 50%;
+  justify-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-bottom: 100px;
+}
 
 @keyframes typing{
     from {width: 0}
@@ -95,10 +115,10 @@ h1{
 
 .rain-animation{
     position: absolute;
-    bottom: 10px;
-    left: 300px;
-    height: 608px;
-    width: 300px;
+    bottom: -30px;
+    left: -20px;
+    height: 456px;
+    width: 225px;
     background-image: url('./assets/plant-sprite.png');
     background-position: right;
     background-repeat: no-repeat;
@@ -107,7 +127,50 @@ h1{
     z-index: 10;
 }
 
+
 @keyframes rain{
     from{background-position: left;}
     to {background-position: right;}
+}
+
+@media only screen and (min-width: 600px){
+  .rain-animation{
+    left: 80px;
+  }
+
+  h1{
+    font-size: 40px;
+  }
+}
+
+@media only screen and (min-width: 1000px){
+  .rain-animation{
+    height: 547px;
+    width: 270px;
+    left: 250px;
+  }
+
+  .header1{
+    height: 480px;
+  }
+
+  h2{
+    font-size: 24px;
+  }
+}
+
+@media only screen and (min-width: 1400px){
+  .rain-animation{
+    height: 608px;
+    width: 300px;
+    left: 450px;
+  }
+
+  .header1{
+    height: 530px;
+  }
+
+  h1{
+    font-size: 60px;
+  }
 }
