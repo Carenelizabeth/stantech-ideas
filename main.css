@@ -148,10 +148,12 @@ h2{
 
 .header2{
   background-image: url('./assets/paper.png');
+  background-size: cover;
   height: 500px;
   display: flex;
   align-items: center;
   flex-direction: column-reverse;
+
 }
 
 .hide{
@@ -263,5 +265,17 @@ h2{
 
   h1{
     font-size: 60px;
+  }
+
+  .header2{
+    justify-content: center;
+  }
+
+  .header2-image{
+    width: 600px;
+  }
+
+  .header2-text{
+    width: 600px;
   }
 }
